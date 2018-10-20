@@ -15,7 +15,7 @@ from util import heuristic_func, check_list, delete_node, add_first_node, print_
 
 def IDS(start_puzzle_node, goal_puzzle_node):
     current_puzzle_node = start_puzzle_node
-    MAXDEPTH = 15
+    MAXDEPTH = 20
     DEPTH = 1 # max searching depth for one dfs iteration
     close_list_sum = 0
     move_action = ["right","left","up","down"]
@@ -147,5 +147,5 @@ def IDS(start_puzzle_node, goal_puzzle_node):
     if (not exist_goal):
         print("### number of searching node in close_list {}".format(len(close_list)))
         print("No solution in IDS before searching MAXDEPTH {}".format(MAXDEPTH))
-        return False, len(close_list_sum)
+        return False, close_list_sum
                                        
